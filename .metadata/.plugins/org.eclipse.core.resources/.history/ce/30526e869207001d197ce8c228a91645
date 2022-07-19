@@ -1,0 +1,47 @@
+package main;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) throws Exception {
+		// entrypoint of the app
+		System.out.println("Welcome to starbucks.");
+		
+		// we want to ask the user what type of coffee they want
+			// input
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please select a choice:");
+		System.out.println("1. Black Coffee");
+		System.out.println("2. Latte");
+		
+		int choice = scanner.nextInt();
+		
+		// create a instance of that coffee
+			// we need something to represent a coffee object (class)
+			// coffee costs .50
+			// latte costs 1.50
+		
+		Drink myDrink = null;
+		Drink cocoa = new Drink("Hot Cocoa", 1.0);
+		
+		if (choice == 1) {
+			myDrink = new Drink("Black Coffee", 0.50);
+		} else if (choice == 2) {
+			myDrink = new Drink("Latte", 1.50);
+		} else if (choice == 3) {
+			myDrink = cocoa;
+		} else {
+			System.out.println("Something went wrong!");
+			throw new Exception("Invalid drink choice");
+		}
+		
+		// ask the instance how much it costs
+			// the coffee class needs to know how much it costs (configuration?)
+		System.out.println("Your choice is: " + myDrink.getName());
+		System.out.println("Your total is: " + myDrink.getCost());
+		// charge the customer
+			// do something with the customers money
+	}
+
+}

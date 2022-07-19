@@ -1,0 +1,40 @@
+package main;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+		
+		// primitive types
+		/*
+		 * All immutable:
+		 * 
+		 * byte
+		 * short
+		 * int
+		 * long
+		 * float
+		 * double
+		 * boolean
+		 * char
+		 * */
+		int number = 0;
+		
+		int broken;
+		
+		System.out.println(number);
+		
+		
+		
+		// reference types
+		/*
+		 * string (this is a special type)
+		 * classes
+		 * structs (doesnt exist in java)
+		 * enumerations
+		 * arrays
+		 * 
+		 * basically anything that is not a primitive and can be nulled
+		 * */
+	}
+}

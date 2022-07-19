@@ -1,0 +1,8 @@
+package main;
+
+public class Drink {
+
+	private double cost = 0.0;
+	
+	
+}

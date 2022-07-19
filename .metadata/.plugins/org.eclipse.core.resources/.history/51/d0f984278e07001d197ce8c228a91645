@@ -1,0 +1,10 @@
+package main;
+
+public class main {
+
+	public static void main(String[] args) {
+		// entrypoint of the app
+		System.out.println("Welcome to starbucks.");
+	}
+
+}

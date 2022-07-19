@@ -1,0 +1,13 @@
+package main;
+
+public class Drink {
+
+	private double cost = 0.0;
+
+	public Drink(double cost) {
+		super();
+		this.cost = cost;
+	}
+	
+	
+}

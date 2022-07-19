@@ -1,0 +1,32 @@
+package main;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// entrypoint of the app
+		System.out.println("Welcome to starbucks.");
+		
+		// we want to ask the user what type of coffee they want
+			// input
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please select a choice:");
+		System.out.println("1. Black Coffee");
+		System.out.println("2. Latte");
+		
+		int choice = scanner.nextInt();
+		
+		System.out.println("Your choice is: " + choice);
+		
+		// create a instance of that coffee
+			// we need something to represent a coffee object (class)
+		
+		// ask the instance how much it costs
+			// the coffee class needs to know how much it costs (configuration?)
+		
+		// charge the customer
+			// do something with the customers money
+	}
+
+}
