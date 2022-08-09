@@ -13,36 +13,35 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please select a choice:");
 		System.out.println("1. Black Coffee");
-		System.out.println("2. Latte");
+		System.out.println("2. House Blend");
+		System.out.println("3. Mocha with Whip");
 		
 		int choice = scanner.nextInt();
 		
-		// create a instance of that coffee
-			// we need something to represent a coffee object (class)
-			// coffee costs .50
-			// latte costs 1.50
-		
 		Drink myDrink = null;
-		Drink cocoa = new Drink("Hot Cocoa", 1.0);
 		
-		if (choice == 1) {
-			myDrink = new Drink("Black Coffee", 0.50);
-		} else if (choice == 2) {
-			myDrink = new Drink("Latte", 1.50);
-		} else if (choice == 3) {
-			myDrink = cocoa;
-			cocoa.setCost(2.0);
-		} else {
-			System.out.println("Something went wrong!");
-			throw new Exception("Invalid drink choice");
+		switch (choice) {
+		case 1:
+			myDrink = new Coffee();
+			break;
+		case 2:
+			myDrink = new HouseBlend();
+			break;
+		case 3:
+			myDrink = new Mocha(new Whip(new Coffee()));
+			break;
+		case 4:
+			myDrink = new Mocha(new Mocha(new Whip(new Whip(new HouseBlend()))));
+			break;
+		default:
+			myDrink = null;
+			break;
 		}
 		
-		// ask the instance how much it costs
-			// the coffee class needs to know how much it costs (configuration?)
-		System.out.println("Your choice is: " + myDrink.getName());
-		System.out.println("Your total is: " + myDrink.getCost());
-		// charge the customer
-			// do something with the customers money
+		myDrink = new Whip(myDrink);
+		
+		System.out.println("You owe: " + myDrink.getCost());
+		System.out.println("You ordered a " + myDrink.getDescription());
 	}
 
 }

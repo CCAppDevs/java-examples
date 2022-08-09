@@ -1,29 +1,11 @@
 package main;
 
-public class Drink {
-
-	private double cost = 0.0; // primitive (requires a value, immutable)
-	private String name; // Reference type (can be null, mutable)
-
-	public Drink(String name, double cost) {
+public abstract class Drink {
+	public Drink() {
 		super();
-		this.cost = cost;
-		this.name = name;
 	}
 
-	public double getCost() {
-		return cost;
-	}
+	public abstract double getCost(); 
 
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	public abstract String getDescription();
 }
