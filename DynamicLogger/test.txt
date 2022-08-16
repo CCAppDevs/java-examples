@@ -1,0 +1,4 @@
+LOG - this is a test of the file system
+WARN - this is a second message
+LOG - this is a test of the file system
+WARN - this is a second message
